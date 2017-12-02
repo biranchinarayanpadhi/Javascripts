@@ -1,0 +1,55 @@
+ul{
+    margin:0;
+    padding:0;
+}
+ul li{
+
+    height:33.33vh;
+    width:100vw;
+
+}
+
+#orange, #white, #green
+{
+height:100%;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#green{
+    background-color:green;
+}
+
+#white{
+    display: flex;
+    justify-content:   center;
+    align-items:center;
+    color:blue;
+    font-family:sans-serif;
+    font-size:110px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+     -moz-animation: blink 0.7s infinite;
+     animation: blink 0.7s infinite;
+    
+}
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+@-moz-keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
