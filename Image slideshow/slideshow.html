@@ -1,0 +1,40 @@
+<DOCTYPE! html>
+    <html>
+        
+        <body>
+            <img src="1.JPG" id="image" style="height:600px; width:700px"/>
+            <br>
+            <input type="button" value="startSlideShow" onclick="startSlideShow()"/>
+            <input type="button" value="stopSlideSow"/ onclick="stopSlideShow()"/>
+            <br>
+            <div id="result"></div>
+        </body>
+        <script type="text/javascript">
+            var intervalId;
+            
+            function startSlideShow()
+            {
+             intervalId=setInterval(changeImage,1000);
+            }
+            function stopSlideShow()
+            {
+                clearInterval(intervalId);
+            }
+            
+            
+            
+            function changeImage(){
+                var imageSrc=document.getElementById("image").getAttribute("src");
+                var currentImageNumber=imageSrc.substring(imageSrc.lastIndexOf("/")+1,imageSrc.lastIndexOf("/")+2);
+                
+                if(currentImageNumber==9)
+                    {
+                        currentImageNumber=0;
+                    }
+               
+                document.getElementById("image").setAttribute("src",(Number(currentImageNumber)+1)+".JPG");
+                document.getElementById("result").innerHTML=currentImageNumber; 
+            }
+        </script>
+        
+    </html>
